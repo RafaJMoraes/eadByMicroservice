@@ -12,6 +12,8 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import static com.ead.authuser.StringsPattern.dateFormatApplication;
+
 @Entity
 @Table(name = "TB_USERS")
 @Data
@@ -55,11 +57,11 @@ public class UserModel implements Serializable {
     private String imageUrl;
 
     @Column(nullable = false)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss" )
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = dateFormatApplication )
     private LocalDateTime creationDate;
 
     @Column(nullable = false)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss" )
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = dateFormatApplication )
     private LocalDateTime lastUpdateDate;
 
 }

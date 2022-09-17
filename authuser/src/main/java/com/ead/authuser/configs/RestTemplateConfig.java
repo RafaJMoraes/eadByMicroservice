@@ -1,4 +1,4 @@
-//package com.ead.course.configs;//package com.ead.authuser.configs;
+package com.ead.authuser.configs;//package com.ead.course.configs;//package com.ead.authuser.configs;
 //
 //
 //import org.springframework.boot.web.client.RestTemplateBuilder;

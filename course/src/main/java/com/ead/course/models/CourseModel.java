@@ -16,6 +16,8 @@ import java.time.LocalDateTime;
 import java.util.Set;
 import java.util.UUID;
 
+import static com.ead.course.StringsPattern.dateFormatApplication;
+
 @Data
 /** nao inclue nulos no json **/
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -38,11 +40,11 @@ public class CourseModel implements Serializable {
     private String imageUrl;
 
     @Column(nullable = false)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = dateFormatApplication)
     private LocalDateTime creationDate;
 
     @Column(nullable = false)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = dateFormatApplication)
     private LocalDateTime lastUpdateDate;
 
     @Column(nullable = false)
